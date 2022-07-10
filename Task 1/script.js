@@ -43,12 +43,12 @@ form.addEventListener("submit", () => {
   tdPounds.style.border = "1px solid black";
   tdGrams.style.border = "1px solid black";
   tdOunces.style.border = "1px solid black";
-  thPounds.style.padding = "15px";
-  thGrams.style.padding = "15px";
-  thOunces.style.padding = "15px";
-  tdPounds.style.padding = "15px";
-  tdGrams.style.padding = "15px";
-  tdOunces.style.padding = "15px";
+  thPounds.style.padding = "20px";
+  thGrams.style.padding = "20px";
+  thOunces.style.padding = "20px";
+  tdPounds.style.padding = "20px";
+  tdGrams.style.padding = "20px";
+  tdOunces.style.padding = "20px";
 
   const inputValue = document.querySelector("input[id=search]").value;
 
