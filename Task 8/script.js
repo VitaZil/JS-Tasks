@@ -6,7 +6,7 @@ multiplication(a, b) - priima du skaičius ir grąžina jų daugybos rezultatą;
 division(a, b) - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
 
-function Calculator(a, b) {
+function Calculator() {
   this.sum = function (a, b) {
     return a + b;
   };
