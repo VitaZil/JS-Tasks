@@ -24,7 +24,7 @@ const getUserAverageAge = (array) => {
   const ageValues = array.map((item) => item.age);
   const sum = ageValues.reduce((a, b) => a + b);
   const ageAverage = sum / ageValues.length;
-  return ageAverage;
+  return ageAverage.toFixed(3);
 };
 
 console.log(getUserAverageAge(users));
