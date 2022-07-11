@@ -11,10 +11,6 @@ turėti bent minimalų stilių ir būti responsive;
 
 const ENDPOINT = "cars.json";
 
-// brand model
-// stilius
-// responsive
-
 fetch(ENDPOINT)
   .then((response) => response.json())
   .then((result) => {
