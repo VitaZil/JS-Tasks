@@ -34,6 +34,7 @@ const createCard = (result) => {
     output.append(card);
     for (let i = 0; i < car.models.length; i++) {
       const carModelUl = document.createElement("ul");
+
       const carModelLi = document.createElement("li");
       carModelLi.innerText = car.models[i];
       carModelUl.append(carModelLi);
@@ -42,6 +43,9 @@ const createCard = (result) => {
 
     output.style.cssText =
       "display: flex; flex-wrap: wrap; flex-direction: row; gap: 10px;";
-    card.style.cssText = "border: 2px solid grey; padding: 20px";
+    card.style.cssText =
+      "border: 2px solid grey; border-radius: 5px; padding: 20px; background: #999";
+    carBrand.style.cssText = "padding-bottom: 10px;";
+    document.querySelector("h1").style.paddingBottom = "15px";
   });
 };
