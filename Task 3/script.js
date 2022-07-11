@@ -13,9 +13,6 @@ turėti bent minimalų stilių ir būti responsive;
 
 const ENDPOINT = "https://api.github.com/users";
 
-// stilius???
-// responsive?
-
 const btn = document.getElementById("btn");
 btn.addEventListener("click", (e) => {
   event.preventDefault();
@@ -32,25 +29,32 @@ btn.addEventListener("click", (e) => {
 
 function createCard(result) {
   result.forEach((item) => {
-    const output = document.querySelector(".output-cointainer");
+    const output = document.querySelector("#output");
     const card = document.createElement("div");
     const login = document.createElement("h2");
-    const avatarUrl = document.createElement("p");
+    const avatarUrl = document.createElement("img");
 
     card.append(login, avatarUrl);
     output.append(card);
 
     login.innerText = item.login;
-    avatarUrl.innerText = item.avatar_url;
+    avatarUrl.src = item.avatar_url;
+    avatarUrl.alt = `User ${item.login} profile photo`;
 
-    output.style.cssText = "display: flex; flex-wrap: wrap; gap: 5px";
+    output.style.cssText =
+      "display: flex; flex-direction: row; flex-wrap: wrap; gap: 5px; background-color: #222;";
     card.style.cssText =
-      "border: 1px solid grey; border-radius: 10px; padding: 5px";
+      "border: 1px solid grey; border-radius: 5px; padding: 5px; width: 250px";
+    avatarUrl.style.width = "100%";
+    avatarUrl.style.borderRadius = "5px";
+    avatarUrl.style.border = "1px solid #fff";
+    login.style.textAlign = "center";
+    login.style.padding = "10px";
+    login.style.color = "#fff";
   });
 }
 
 function hideButton() {
   btn.style.display = "none";
   document.getElementById("message").style.display = "none";
-  document.getElementById("output").style.backgroundColor = "#222";
 }
