@@ -23,4 +23,7 @@ function Calculator() {
 
 const numbers = new Calculator();
 
+console.log(numbers.sum(5, 9));
 console.log(numbers.subtraction(5, 9));
+console.log(numbers.multiplication(5, 9));
+console.log(numbers.division(5, 9));
