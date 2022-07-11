@@ -38,6 +38,15 @@ document.querySelector("form").addEventListener("submit", () => {
   trEl2.append(tdKilo, tdPounds, tdGrams, tdOunces);
   table.append(trEl2);
 
+  const poundsResult = inputValue * 2.2046;
+  const gramsResult = inputValue * 0.001;
+  const ouncesResult = inputValue * 35.274;
+
+  tdKilo.innerText = inputValue;
+  tdPounds.innerText = poundsResult;
+  tdGrams.innerText = gramsResult;
+  tdOunces.innerText = ouncesResult;
+
   table.style.margin = "20px auto";
   table.style.border = "3px solid black";
   table.style.borderCollapse = "collapse";
@@ -57,13 +66,4 @@ document.querySelector("form").addEventListener("submit", () => {
   tdPounds.style.padding = "20px";
   tdGrams.style.padding = "20px";
   tdOunces.style.padding = "20px";
-
-  const poundsResult = inputValue * 2.2046;
-  const gramsResult = inputValue * 0.001;
-  const ouncesResult = inputValue * 35.274;
-
-  tdKilo.innerText = inputValue;
-  tdPounds.innerText = poundsResult;
-  tdGrams.innerText = gramsResult;
-  tdOunces.innerText = ouncesResult;
 });
