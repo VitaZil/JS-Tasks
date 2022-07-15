@@ -16,8 +16,6 @@ const ENDPOINT = "https://api.github.com/users";
 const btn = document.getElementById("btn");
 
 btn.addEventListener("click", () => {
-  event.preventDefault();
-
   fetch(ENDPOINT)
     .then((response) => response.json())
     .then((result) => {

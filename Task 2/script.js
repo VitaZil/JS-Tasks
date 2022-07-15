@@ -6,8 +6,6 @@ pusėje esančiame "state" skaičiavimo bloke (<div id="btn__state">0</div>)
 let current = 0;
 
 document.getElementById("btn__element").addEventListener("click", () => {
-  event.preventDefault();
-
   const btnState = document.getElementById("btn__state");
 
   if (event.target) {

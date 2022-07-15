@@ -21,7 +21,7 @@ const users = [
 ];
 
 function filterDogOwers(array) {
-  return array.filter((item) => item.hasDog === true);
+  return array.filter((item) => item.hasDog);
 }
 
 console.log(filterDogOwers(users));
